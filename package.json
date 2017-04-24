@@ -1,0 +1,12 @@
+{
+  "name": "twitter-js",
+  "version": "1.0.0",
+  "description": "tweet app",
+  "main": "index.js",
+  "repository": "https://github.com/jrleja0/twitter-js.git",
+  "author": "Jasiu Leja <jleja09@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
