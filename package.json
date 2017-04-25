@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "tweet app",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
   "repository": "https://github.com/jrleja0/twitter-js.git",
   "author": "Jasiu Leja <jleja09@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "nunjucks": "^3.0.0",
+    "volleyball": "^1.4.1"
   }
 }
