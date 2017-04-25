@@ -1,9 +1,10 @@
 const _ = require('lodash');
 
 var data = [];
+var idCount = 1;
 
 function add (name, content) {
-  data.push({ name: name, content: content });
+  data.push({ name: name, content: content, id: String(idCount++) });
 }
 
 function list () {
@@ -36,8 +37,8 @@ for (let i = 0; i < 10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 
-data.push({ name: 'Geoff Docsreader',
-    content: 'Fullstack Academy is impressive! The instructors are just so sweet. #fullstacklove #codedreams' });
-console.log(module.exports.find(function(data) {
-  //console.log(data.name);
-  return data.name === 'Geoff Docsreader'; }));
+// data.push({ name: 'Geoff Docsreader',
+//     content: 'Fullstack Academy is impressive! The instructors are just so sweet. #fullstacklove #codedreams' });
+// console.log(module.exports.find(function(data) {
+//   //console.log(data.name);
+//   return data.name === 'Geoff Docsreader'; }));

@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const volleyball = require('volleyball')
 const nunjucks = require('nunjucks')
 const routes = require('./routes');
@@ -10,6 +11,20 @@ app.listen(PORT, function() {
 });
 
 app.use(volleyball)
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
+// non-essential function below:
+// app.use(function (req, res) {
+//   res.setHeader('Content-Type', 'text/plain')
+//   res.write('you posted:\n')
+//   //res.end(JSON.stringify(req.body, null, 2))
+// })
+
 
 // app.get('/', function (req, res) {
 //   const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
